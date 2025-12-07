@@ -1,0 +1,140 @@
+:root {
+    --dark-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-color-light: #ecf0f1;
+    --text-color-dark: #34495e;
+    --border-color-light: rgba(255, 255, 255, 0.3);
+    --border-color-dark: #e0e0e0;
+    --spacing-default: 15px;
+    --spacing-large: 30px;
+}
+
+.cv-container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.sidebar {
+    background-color: var(--dark-color);
+    color: var(--text-color-light);
+    min-height: 100vh;
+    padding: var(--spacing-large) !important;
+}
+
+.content-area {
+    background-color: #ffffff;
+    color: var(--text-color-dark);
+    padding: var(--spacing-large) !important;
+    font-size: 1.05rem;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid var(--border-color-light);
+}
+
+.sidebar .section-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-color-light);
+    padding-bottom: 5px;
+    margin-bottom: var(--spacing-default);
+}
+
+.content-area h2 {
+    color: var(--dark-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-color-dark);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+}
+
+.contact-list, .language-list, .hobby-list, .skill-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.contact-list li {
+    padding: 2px 0 !important;
+    margin: 0 !important;
+    line-height: 1.2;
+    font-size: 0.95rem;
+}
+
+.skill-list li {
+    position: relative;
+    padding-left: 1.2em;
+    line-height: 1.6;
+}
+.skill-list li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: var(--text-color-light);
+    font-weight: bold;
+}
+.contact-list i, .language-list i {
+    color: var(--text-color-light);
+}
+
+.content-area p, .project-description li {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.content-area section {
+    margin-bottom: 30px;
+    padding-bottom: 0;
+}
+
+.education-item {
+    margin-bottom: var(--spacing-default);
+}
+
+.education-item:last-child {
+    margin-bottom: 25px !important;
+}
+
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-description {
+    list-style-type: disc;
+    padding-left: var(--spacing-large);
+    margin-top: 5px;
+}
+
+.skill-list li.is-active {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.project-item {
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.project-item.is-highlighted {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fcfcfc;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        min-height: auto;
+    }
+    .cv-container {
+        margin: 0;
+    }
+}
